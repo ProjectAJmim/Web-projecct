@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix to Tree Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Rooted Tree Visualizer</h1>
+    <div class="main-container">
+        <div class="left-section">
+            <div class="matrix-container">
+                <h3>Adjacency Matrix (8x8)</h3>
+                <div class="matrix-label">
+                    <span></span>
+                    <span>1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                </div>
+                <div id="matrix-container" class="matrix"></div>
+                <button onclick="generateRandomMatrix()">Generate Random Matrix</button>
+                <button onclick="generateTree()">Generate Tree</button>
+            </div>
+
+            <div class="tree-container">
+                <h3>Tree Visualization</h3>
+                <div id="tree-container" class="tree"></div>
+            </div>
+        </div>
+
+        <div class="right-section">
+            <div class="user-input-container">
+                <h3>Input Node Relationships</h3>
+                <p>(if many nodes use comma / if no answer leave it blank)</p>
+                <div id="user-inputs"></div>
+                <button onclick="processUserInput()">Submit Relationships</button>
+                <button onclick="toggleAnswerPopup()">Show Answer</button>
+            </div>
+
+            <div id="result" class="result-container">
+                <h3>User-Defined Relationships</h3>
+                <div id="relationship-output"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

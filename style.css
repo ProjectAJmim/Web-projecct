@@ -1,0 +1,160 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFF0F5; /* Cream */
+    color: #333;
+}
+
+/* Main Layout */
+.main-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 20px;
+}
+
+/* Left Section */
+.left-section {
+    flex: 1;
+}
+
+.matrix-container, .tree-container {
+    background-color: #E6E6FA; /* Light Brown */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.matrix-label {
+    display: grid;
+    grid-template-columns: 40px repeat(8, 40px);
+    gap: 2px;
+    justify-content: left;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.matrix-container {
+    margin-top: 10px;
+}
+
+.matrix-row {
+    display: grid;
+    grid-template-columns: 40px repeat(8, 40px);
+    gap: 2px;
+}
+
+.matrix-row span {
+    text-align: center;
+}
+
+.matrix input {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    margin: 2px;
+    background-color: #f2f8ed; /* Light Green */
+    border: 1px solid #b1cbbb; /* Greenish Grey */
+    border-radius: 4px;
+    color: #586e75;
+}
+
+.tree {
+    position: relative;
+    margin-top: 10px;
+    height: 500px;
+    width: 700px;
+    border: 1px solid #b1cbbb; /* Greenish Grey */
+    background-color: #dceefb; /* Light Blue */
+    overflow: hidden;
+}
+
+.node {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border: 2px solid #88c9bf; /* Teal Green */
+    border-radius: 50%;
+    background-color: #88c9bf; /* Teal Green */
+    color: white;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.tree div {
+    position: absolute;
+    z-index: 1;
+}
+
+/* Right Section */
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.user-input-container, .result-container {
+    background-color: #E6E6FA; /* Light Brown */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.user-input-container input {
+    width: 95%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #b1cbbb; /* Greenish Grey */
+    border-radius: 4px;
+    background-color: #f2f8ed; /* Light Green */
+}
+
+/* Buttons */
+button {
+    background-color: #88c9bf; /* Teal Green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #6aafa7; /* Darker Teal */
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Popup */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #ddd;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    max-width: 80%;
+    overflow: auto;
+    max-height: 80%;
+}
+
+.popup h3 {
+    margin-top: 0;
+}
